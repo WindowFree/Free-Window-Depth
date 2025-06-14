@@ -1,0 +1,13 @@
+--model_name nbd_nyu_gru2
+--encoder large07
+--dataset nyu
+--input_height 480
+--input_width 640
+--max_depth 10
+
+--data_path your_dataset_path
+--filenames_file data_splits/nyudepthv2_test_files_with_gt.txt
+--gru_epochs 2
+--save_viz
+
+--checkpoint_path your_checkpoint_path

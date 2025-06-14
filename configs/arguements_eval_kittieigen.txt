@@ -1,0 +1,16 @@
+--model_name nbd_kitti_gru5
+--encoder large07
+--dataset kitti
+--input_height 352
+--input_width 1216
+--max_depth 80
+--do_kb_crop
+
+--data_path your_dataset_path
+--filenames_file data_splits/eigen_test_files_with_gt.txt
+--pred_clouds
+--save_viz
+--pred_clouds
+--gru_epochs 5
+
+--checkpoint_path your_checkpoint_path
