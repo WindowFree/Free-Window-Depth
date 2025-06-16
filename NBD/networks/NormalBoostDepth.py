@@ -128,9 +128,9 @@ class NormalBoostDepth_v5_QCRF_GRU(nn.Module):
 
     def forward(self, imgs, epoch):
         feats = self.backbone(imgs)
-        # 压缩得到的特征map
+        
         ppm = self.psp(feats)
-        # normal 特征
+        # normal feature
         e3 = self.crf3(feats[3], ppm)
         e3 = nn.PixelShuffle(2)(e3)
         e2 = self.crf2(feats[2], e3)
@@ -138,7 +138,7 @@ class NormalBoostDepth_v5_QCRF_GRU(nn.Module):
         e1 = self.crf1(feats[1], e2)
         e1 = nn.PixelShuffle(2)(e1)
         e0 = self.crf0(feats[0], e1)
-        # depth 特征
+        # depth feature
         e7 = self.crf7(feats[3], ppm)
         e7 = nn.PixelShuffle(2)(e7)
         e6 = self.crf6(feats[2], e7)
