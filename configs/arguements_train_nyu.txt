@@ -1,7 +1,7 @@
 --mode train
 --model_name nbd_nyu_gru_newcrfs_iters5
 --encoder large07
---pretrain /home/maoyf/temp_disk/swin_large_patch4_window7_224_22k.pth
+--pretrain pretrain_encoder_path
 --dataset nyu
 --data_path your_dataset_path
 --gt_path your_dataset_gt_path
